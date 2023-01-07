@@ -1,0 +1,26 @@
+interface Props {
+  subs: Array<{
+    nick: string;
+    avatar: string;
+    subMonths: number;
+    description?: string;
+  }>;
+}
+
+const List = ({ subs }: Props) => {
+  const renderList = (): JSX.Element[] => {
+    return subs.map((sub) => (
+      <li key={sub.nick} className="list">
+        <img src={sub.avatar} alt={sub.description} />
+        <h4>
+          {sub.nick} (<small>{sub.subMonths}</small>)
+        </h4>
+        <p>{sub.description?.substring(0, 100)}</p>
+      </li>
+    ));
+  };
+
+  return <ul>{renderList()}</ul>;
+};
+
+export default List;
