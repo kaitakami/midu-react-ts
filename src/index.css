@@ -27,14 +27,20 @@ ul {
 input {
     margin: auto;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
 }
 
 button {
     width: 100%;
-    max-width:520px;
+    max-width: 520px;
     margin: 0;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+textarea {
+    margin: auto;
 }
 
 h3 {
